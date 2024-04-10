@@ -81,21 +81,21 @@
 				"dates": "Jan 2023 - Aug 2023",
 				"type": "Full Time",
 				"position": "Full-Stack Intern at Atlassian",
-				"bullets": "Worked on the Jira Platform's Issue Navigator, focusing on improving issue search experience for all Jira users."
+				"bullets": "Worked on the Jira Platform's Issue Navigator| Focusing on improving issue search experience for all Jira users.| Worked on Soft Delete Project, allowing customers to delete and recover favourites, subscriptions etc.|Migrated view and layout switchers from Apollo to Relay|Migrated tests from Enzyme to RTL to support React 18 features."
 			},
 			{
 				"id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
 				"dates": "Aug 2023 - Feb 2024",
 				"type": "Full Time",
 				"position": "Backend Intern at Honeywell",
-				"bullets": "Working in the HPS Experion TPS Division, developing new features, and conducting testing and verification on various systems including Experion, OPC UA Server, and Digital Video Manager."
+				"bullets": "Working in the HPS Experion TPS Division| Developing new features| Conducting testing and verification on various systems including Experion PKS, OPC UA Server and Digital Video Manager."
 			},
 			{
 				"id": "b9dc0844-7ce1-477b-8d32-ca09e3b84031",
 				"dates": "Jan 2022 - Jun 2022",
 				"type": "Full Time",
 				"position": "Digital Networks and Automation Intern at OPTUS",
-				"bullets": "Worked in the Robotic Process Automation team to write, deploy and maintain end-to-end unattended automations in UiPath Studio using the ReFramework and state machines, reducing manual effort required on repetitive processes."
+				"bullets": "Worked in the Robotic Process Automation team to write, deploy and maintain end-to-end unattended automations in UiPath Studio| Used the ReFramework and state machines| Reduced manual effort required on repetitive processes."
 			}
 		],
 		"education": {

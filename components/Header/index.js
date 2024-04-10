@@ -82,7 +82,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
                     {showResume && (
                       <Button
                         onClick={() =>
-                          window.open("https://www.linkedin.com/in/agarwal-r/")
+                          // window.open("https://www.linkedin.com/in/agarwal-r/")
+                          router.push("/resume")
                         }
                       >
                         Resume
@@ -123,88 +124,91 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
             </>
           )}
         </Popover>
-      )}
-      {mounted && (
-        <div
-          className={`nav-bar w-[100%] top-0 mt-10 pl-4 pr-2 rounded-3xl ${theme === "dark" ? "bg-none" : "bg-white"} border-2 border-nav-border shadow-xl h-20 hidden flex-row items-center justify-between dark:text-white top-0 z-50 tablet:flex`}
-        >
-          <h1
-            onClick={() => router.push("/")}
-            className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+      )
+      }
+      {
+        mounted && (
+          <div
+            className={`nav-bar w-[100%] top-0 mt-10 pl-4 pr-2 rounded-3xl ${theme === "dark" ? "bg-none" : "bg-white"} border-2 border-nav-border shadow-xl h-20 hidden flex-row items-center justify-between dark:text-white top-0 z-50 tablet:flex`}
           >
-            {name} &apos;24.
-          </h1>
-          {!isBlog ? (
-            <div className="flex">
-              <Button onClick={handleWorkScroll}>Work</Button>
-              <Button onClick={handleAboutScroll}>About</Button>
-              {showBlog && (
-                <Button onClick={() => router.push("/blog")}>Blog</Button>
-              )}
-              {showResume && (
+            <h1
+              onClick={() => router.push("/")}
+              className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+            >
+              {name} &apos;24.
+            </h1>
+            {!isBlog ? (
+              <div className="flex">
+                <Button onClick={handleWorkScroll}>Work</Button>
+                <Button onClick={handleAboutScroll}>About</Button>
+                {showBlog && (
+                  <Button onClick={() => router.push("/blog")}>Blog</Button>
+                )}
+                {showResume && (
+                  <Button
+                    onClick={() => router.push("/resume")}
+                    classes="first:ml-1"
+                  >
+                    Resume
+                  </Button>
+                )}
                 <Button
-                  onClick={() => router.push("/resume")}
-                  classes="first:ml-1"
+                  onClick={handleContactScroll}
                 >
-                  Resume
+                  Contact
                 </Button>
-              )}
-              <Button
-                onClick={handleContactScroll}
-              >
-                Contact
-              </Button>
-              {mounted && theme && data.darkMode && (
-                <Button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                >
-                  <div className="relative h-6 w-6">
-                    <Image
-                      src={theme === "dark" ? moonImg : sunImg}
-                      alt="Theme Icon"
-                      layout="fill"
-                    />
-                  </div>
-                  {/* <img src={theme === "dark" ? "/images/moon.svg" : "/images/sun.svg"} alt="Theme Icon" className="h-6 w-6" /> */}
-                </Button>
-              )}
-            </div>
-          ) : (
-            <div className="flex">
-              <Button onClick={() => router.push("/")}>Home</Button>
-              {showBlog && (
-                <Button onClick={() => router.push("/blog")}>Blog</Button>
-              )}
-              {showResume && (
-                <Button
-                  onClick={() => router.push("/resume")}
-                  classes="first:ml-1"
-                >
-                  Resume
-                </Button>
-              )}
+                {mounted && theme && data.darkMode && (
+                  <Button
+                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  >
+                    <div className="relative h-6 w-6">
+                      <Image
+                        src={theme === "dark" ? moonImg : sunImg}
+                        alt="Theme Icon"
+                        layout="fill"
+                      />
+                    </div>
+                    {/* <img src={theme === "dark" ? "/images/moon.svg" : "/images/sun.svg"} alt="Theme Icon" className="h-6 w-6" /> */}
+                  </Button>
+                )}
+              </div>
+            ) : (
+              <div className="flex">
+                <Button onClick={() => router.push("/")}>Home</Button>
+                {showBlog && (
+                  <Button onClick={() => router.push("/blog")}>Blog</Button>
+                )}
+                {showResume && (
+                  <Button
+                    onClick={() => router.push("/resume")}
+                    classes="first:ml-1"
+                  >
+                    Resume
+                  </Button>
+                )}
 
-              <Button onClick={handleContactScroll}>
-                Contact
-              </Button>
-
-              {mounted && theme && data.darkMode && (
-                <Button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                >
-                  <div className="relative h-6 w-6">
-                    <Image
-                      src={theme === "dark" ? moonImg : sunImg}
-                      alt="Theme Icon"
-                      layout="fill"
-                    />
-                  </div>
+                <Button onClick={handleContactScroll}>
+                  Contact
                 </Button>
-              )}
-            </div>
-          )}
-        </div>)}
-    </div>
+
+                {mounted && theme && data.darkMode && (
+                  <Button
+                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  >
+                    <div className="relative h-6 w-6">
+                      <Image
+                        src={theme === "dark" ? moonImg : sunImg}
+                        alt="Theme Icon"
+                        layout="fill"
+                      />
+                    </div>
+                  </Button>
+                )}
+              </div>
+            )}
+          </div>)
+      }
+    </div >
   );
 };
 
