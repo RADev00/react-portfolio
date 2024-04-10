@@ -11,6 +11,9 @@ import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
 import { useTheme } from "next-themes";
+import projectOneImg from "../public/images/project-one-uplift.png"
+import projectTwoImg from "../public/images/project-two-envoy-frontend.png"
+import projectThreeImg from "../public/images/project-two-envoy-frontend.png"
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -32,6 +35,7 @@ export default function Home() {
   const textFour = useRef();
   const textFive = useRef();
   const [mounted, setMounted] = useState(false);
+  const projectImgs = [projectOneImg, projectTwoImg, projectThreeImg];
 
   // Dark Mode Theme
   const { theme } = useTheme();
@@ -109,7 +113,7 @@ export default function Home() {
 
       <div className="section pt-0 glass-bg">
         <div className="gradient-glass-bg">
-          {/* <svg xmlns="http://www.w3.org/2000/svg">
+          <svg xmlns="http://www.w3.org/2000/svg">
             <defs>
               <filter id="goo">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
@@ -117,7 +121,7 @@ export default function Home() {
                 <feBlend in="SourceGraphic" in2="goo" />
               </filter>
             </defs>
-          </svg> */}
+          </svg>
           <div className="gradients-container">
             <div className="g1"></div>
             <div className="g2"></div>
@@ -178,60 +182,21 @@ export default function Home() {
         <div className="section" ref={workRef}>
           <div className="mt-10 laptop:mt-10 p-2 laptop:p-0">
             <h1 className="pt-30 text-2xl text-bold font-medium">Work.</h1>
-
             <div className="mt-5 laptop:mt-10 grid grid-cols-1 laptop:grid-cols-2 gap-4">
-              {data.projects.map((project) => (
+              {data.projects.map((project, index) => (
                 <WorkCard
                   key={project.id}
-                  img={project.imageSrc}
+                  // img={project.imageSrc}
+                  img={projectImgs[index]}
                   name={project.title}
                   description={project.description}
                   onClick={() => window.open(project.url)}
                 />
               ))}
-              {/* <WorkCard
-              key={data.projects.length + 1}
-              img="/images/project-coming-soon.jpeg"
-              name=" "
-              description=" "
-            // onClick={() => window.open(project.url)}
-            /> */}
-              {/* <div
-              className="cursor-pointer shadow-lg border-2 border-slate-200 overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
-            >
-              <div
-                className="relative shadow-md border-2 border-slate-200 rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
-                style={{ height: "300px", display: "flex", justifyContent: "center", alignItems: "center" }}
-              >
-                <p style={{ fontSize: "1.5em" }}>More Coming Soon...</p>
-              </div>
-              <h1 className="mt-5 text-3xl font-medium"> </h1>
-              <h2 className="text-xl opacity-50"> </h2>
-            </div> */}
             </div>
           </div>
         </div>
 
-        {/* <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
-          <h1 className="tablet:my-10 text-2xl text-bold">Key Skills.</h1>
-          <div className="mt-5 tablet:mt-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
-        </div> */}
-        {/* This button should not go into production */}
-        {/* {process.env.NODE_ENV === "development" && (
-          <div className="fixed bottom-5 right-5">
-            <Link href="/edit">
-              <Button type="primary">Edit Data</Button>
-            </Link>
-          </div>
-        )} */}
         <div className="section w-full" ref={aboutRef}>
           <div className="mt-20 laptop:mt-20 p-2 laptop:p-0 w-full">
             <h1 className="pt-30 tablet:my-10 text-lg laptop:text-2xl text-bold font-medium">About.</h1>
@@ -249,10 +214,6 @@ export default function Home() {
             <Footer contactRef={contactRef} />
             <h1 className="text-sm text-bold mt-2 mt-5 p-2 laptop:p-0">
               Made by Rohan Agarwal, 2024.
-              {/* Made by{" "}
-              <Link href="http://www.rohanagarwal.com">
-                <a className="underline underline-offset-1">Rohan Agarwal</a>
-              </Link> */}
             </h1>
           </div>
         </div>

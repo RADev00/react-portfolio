@@ -3,8 +3,15 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Button from "../Button";
+import Image from "next/image";
 // Local Data
 import data from "../../data/portfolio.json";
+import moonImg from "../../public/images/moon.svg";
+import sunImg from "../../public/images/sun.svg";
+import menuImg from "../../public/images/menu.svg"
+import menuWhiteImg from "../../public/images/menu-white.svg"
+import cancelImg from "../../public/images/cancel.svg"
+import cancelWhiteImg from "../../public/images/cancel-white.svg"
 
 const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBlog }) => {
   const router = useRouter();
@@ -38,26 +45,24 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
                         setTheme(theme === "dark" ? "light" : "dark")
                       }
                     >
-                      <img
-                        className="h-6"
-                        src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"
-                          }`}
-                      ></img>
+                      <div className="relative h-6 w-6">
+                        <Image
+                          src={theme === "dark" ? moonImg : sunImg}
+                          alt="Theme Icon"
+                          layout="fill"
+                        />
+                      </div>
                     </Button>
                   )}
 
                   <Popover.Button>
-                    <img
-                      className="h-5"
-                      src={`/images/${!open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
-                          ? "cancel.svg"
-                          : "cancel-white.svg"
-                        }`}
-                    ></img>
+                    <div className="relative h-5 w-5">
+                      <Image
+                        src={!open ? (theme === "dark" ? menuWhiteImg : menuImg) : (theme == "light" ? cancelImg : cancelWhiteImg)}
+                        alt="Theme Icon"
+                        layout="fill"
+                      />
+                    </div>
                   </Popover.Button>
                 </div>
               </div>
@@ -151,10 +156,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
                 <Button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 >
-                  <img
-                    className="h-6"
-                    src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                  ></img>
+                  <div className="relative h-6 w-6">
+                    <Image
+                      src={theme === "dark" ? moonImg : sunImg}
+                      alt="Theme Icon"
+                      layout="fill"
+                    />
+                  </div>
                 </Button>
               )}
             </div>
@@ -181,10 +189,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
                 <Button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 >
-                  <img
-                    className="h-6"
-                    src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                  ></img>
+                  <div className="relative h-6 w-6">
+                    <Image
+                      src={theme === "dark" ? moonImg : sunImg}
+                      alt="Theme Icon"
+                      layout="fill"
+                    />
+                  </div>
                 </Button>
               )}
             </div>
