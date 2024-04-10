@@ -52,6 +52,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
                           layout="fill"
                         />
                       </div>
+                      {/* <img src={theme === "dark" ? moonImg : sunImg} alt="Theme Icon" className="h-6 w-6" /> */}
                     </Button>
                   )}
 
@@ -59,10 +60,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
                     <div className="relative h-5 w-5">
                       <Image
                         src={!open ? (theme === "dark" ? menuWhiteImg : menuImg) : (theme == "light" ? cancelImg : cancelWhiteImg)}
-                        alt="Theme Icon"
+                        alt="Menu Icon"
                         layout="fill"
                       />
                     </div>
+                    {/* <img src={!open ? (theme === "dark" ? menuWhiteImg : menuImg) : (theme == "light" ? cancelImg : cancelWhiteImg)} alt="Menu Icon" className="h-5 w-5" /> */}
                   </Popover.Button>
                 </div>
               </div>
@@ -163,6 +165,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
                       layout="fill"
                     />
                   </div>
+                  {/* <img src={theme === "dark" ? "/images/moon.svg" : "/images/sun.svg"} alt="Theme Icon" className="h-6 w-6" /> */}
                 </Button>
               )}
             </div>
