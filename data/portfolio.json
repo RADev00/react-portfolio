@@ -1,0 +1,131 @@
+{
+	"name": "Rohan Agarwal",
+	"headerTaglineOne": "Hi 👋 I'm Rohan.",
+	"headerTaglineTwo": "I'm a result-driven,",
+	"headerTaglineThree": "innovative, full-stack",
+	"headerTaglineFour": "developer, based in ",
+	"headerTaglineFive": "based in Sydney, Australia.",
+	"showCursor": false,
+	"showBlog": false,
+	"darkMode": true,
+	"showResume": true,
+	"socials": [
+		{
+			"id": "1",
+			"title": "🤝 LinkedIn",
+			"link": "https://www.linkedin.com/in/agarwal-r/"
+		},
+		{
+			"id": "2",
+			"title": "👾 Github",
+			"link": "https://github.com/RohanADev01"
+		},
+		{
+			"id": "3",
+			"title": "📩 Email",
+			"link": "https://www.linkedin.com/in/agarwal-r/"
+		}
+	],
+	"projects": [
+		{
+			"id": "1",
+			"title": "CSE Uplift Hackathon",
+			"description": "Winner for Best UI/UX. Collates a personalised, unbiased news feed using sentiment analysis.",
+			"imageSrc": "/images/project-one-uplift.png",
+			"url": "https://github.com/CSESoc-Hackathon-Uplift"
+		},
+		{
+			"id": "2",
+			"title": "Envoy (Frontend)",
+			"description": "Runner-up for Macquarie Group Prize. Invoicing Application crafted for SMEs.",
+			"imageSrc": "/images/project-two-envoy-frontend.png",
+			"url": "https://github.com/RohanADev01/envoy"
+		},
+		{
+			"id": "3",
+			"title": "Envoy (Backend/Server)",
+			"description": "Runner-up for Macquarie Group Prize. Invoicing Application crafted for SMEs.",
+			"imageSrc": "/images/project-two-envoy-frontend.png",
+			"url": "https://github.com/RohanADev01/api_adapter"
+		}
+	],
+	"services": [
+		{
+			"id": "1",
+			"title": "Team Player and Leader",
+			"description": "Brings strong interpersonal and communication skills to the table, fostering collaboration and understanding in diverse team environments, crucial for the successful completion of complex projects."
+		},
+		{
+			"id": "2",
+			"title": "Problem-Solver",
+			"description": "Employs a creative, solution-focused approach to problem-solving, adept at navigating and resolving challenges in fast-paced development settings."
+		},
+		{
+			"id": "3",
+			"title": "Agile and Adaptive",
+			"description": "Thrives in dynamic project environments, demonstrating agility and adaptability in response to evolving requirements and new challenges."
+		},
+		{
+			"id": "4",
+			"title": "Quick Learner and All-Rounder",
+			"description": "Exhibits a remarkable ability to rapidly acquire new skills and knowledge, paired with a diverse proficiency in multiple programming languages and full-stack capabilities. This unique combination enables efficient adaptation to various technologies and frameworks, ensuring a broad range of solutions from front-end to back-end development."
+		}
+	],
+	"aboutpara": "🚀 Innovator. Problem Solver. Challenge Seeker. 🧠\n\nHey there! 👋 I'm Rohan. I'm currently in my final year @ UNSW Sydney, studying Software Engineering.\n\nCurrently, I'm on the lookout for innovative projects that can challenge and inspire me. Whether it's crafting elegant solutions to complex problems, optimising processes for efficiency, or exploring emerging technologies such as AI/ML or Blockchain, I'm eager to dive in and make a meaningful impact.\n\nBeyond coding, you'll find me exploring new places, experimenting with new food, or diving into a good book. I believe in living life to the fullest and finding inspiration in everything around us.\n\nLet's connect and explore opportunities to work on something amazing together! Drop me a message, and let's make magic happen. ✨",
+	"resume": {
+		"tagline": "👋  I'm a Software Engineer with skills in Full Stack Development.",
+		"description": "Well-versed with React, TypeScript, Javascript, and most of the Web frameworks, as well as backend and database lanuages and frameworks. I have a keen eye for innovation and am always on the lookout to expand my knowledge and skills to emerging fields such as Datasciene, having done my Honours Thesis Research on Self-supervised Cough and Apnea Detection on the edge.",
+		"experiences": [
+			{
+				"id": "1",
+				"dates": "Jan 2023 - Aug 2023",
+				"type": "Full Time",
+				"position": "Full-Stack Intern at Atlassian",
+				"bullets": "Worked on the Jira Platform's Issue Navigator, focusing on improving issue search experience for all Jira users."
+			},
+			{
+				"id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+				"dates": "Aug 2023 - Feb 2024",
+				"type": "Full Time",
+				"position": "Backend Intern at Honeywell",
+				"bullets": "Working in the HPS Experion TPS Division, developing new features, and conducting testing and verification on various systems including Experion, OPC UA Server, and Digital Video Manager."
+			},
+			{
+				"id": "b9dc0844-7ce1-477b-8d32-ca09e3b84031",
+				"dates": "Jan 2022 - Jun 2022",
+				"type": "Full Time",
+				"position": "Digital Networks and Automation Intern at OPTUS",
+				"bullets": "Worked in the Robotic Process Automation team to write, deploy and maintain end-to-end unattended automations in UiPath Studio using the ReFramework and state machines, reducing manual effort required on repetitive processes."
+			}
+		],
+		"education": {
+			"universityName": "University of New South Wales, Sydney, Australia",
+			"universityDate": "2021-2024",
+			"universityPara": " Bachelor of Software Engineering (Honours)"
+		},
+		"languages": [
+			"Javascript",
+			"HTML5/CSS",
+			"Python/Flask/Django",
+			"Java",
+			"GraphQL/Apollo/Relay",
+			"Terraform",
+			"SQL/PostgreSQL",
+			"Redis",
+			"Solidity",
+			"C++/C"
+		],
+		"frameworks": [
+			"React, TypeScript, NextJS",
+			"NodeJS",
+			"AWS (EC2, S3, DynamoDB, RDS)",
+			"Cypress, Jest, Mockito"
+		],
+		"others": [
+			"Leadership",
+			"Communication",
+			"Problem Solving",
+			"Analytical Skills"
+		]
+	}
+}
